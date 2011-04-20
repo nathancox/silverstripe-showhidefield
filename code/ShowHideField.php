@@ -5,7 +5,7 @@ class ShowHideField extends DropdownField {
 
 	static function include_files() {
 		Requirements::javascript(THIRDPARTY_DIR.'/jquery-livequery/jquery.livequery.js');    
-		Requirements::javascript('fmcextensions/javascript/showhidefield.js');
+		Requirements::javascript('showhidefield/javascript/showhidefield.js');
 	}
 	
 	function FieldHolder() {

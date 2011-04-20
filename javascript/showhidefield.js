@@ -5,13 +5,20 @@
 		select.change(function() {
 			var selectVal = select.val();
 			$('option', this).each(function() {
-				var field = $('#'+this.value);
-				
-				if (field.length == 1) {
-					if (this.value == selectVal) {
-						field.css('display', 'block');
-					} else {
-						field.css('display', 'none');
+				var value = this.value;
+				if (value != '') {
+					var field = $('#'+value);
+					
+					if (field.length == 0) {
+						field = $('#'+value + 'ID');
+					}
+
+					if (field.length == 1) {
+						if (value == selectVal) {
+							field.css('display', 'block');
+						} else {
+							field.css('display', 'none');
+						}
 					}
 				}
 			});
