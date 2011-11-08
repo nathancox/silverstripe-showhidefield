@@ -1,6 +1,6 @@
 <?php
 
-class ShowHideField extends DropdownField {
+class OptionsetShowHideField extends OptionsetField {
 
 
 	static function include_files() {
@@ -10,12 +10,12 @@ class ShowHideField extends DropdownField {
 	}
 	
 	function FieldHolder() {
-		ShowHideField::include_files();
+		OptionsetShowHideField::include_files();
 		return parent::FieldHolder();
 	}
 	
 	function Field() {
-		ShowHideField::include_files();
+		OptionsetShowHideField::include_files();
 		return parent::Field();
 	}
 }
